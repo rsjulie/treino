@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:treino/app/modules/treino.dart';
+import 'package:treino/app/modules/treino_A.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: Treino(),
+      home: const Treino(),
+      routes: {
+        '/treinoA': (context) => const TreinoA(),
+      },
     );
   }
 }
