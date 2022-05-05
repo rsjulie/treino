@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 class TreinoA extends StatefulWidget {
@@ -7,24 +6,26 @@ class TreinoA extends StatefulWidget {
   State<TreinoA> createState() => _TreinoAState();
 }
 
-
-
 class _TreinoAState extends State<TreinoA> {
   List<String> treinos = [
-  'Esteira',
-  'Bicicleta'
-];
-   List<bool> _isChecked = [];
-   @override
+    'Cardio',
+    'Cadeira Flexora',
+    'Remada Máquina',
+    'Cadeira Abdutora',
+    'Puxada Frontal Aberta',
+    'Glúteo Máquina',
+    'Rosca Alternada Halter',
+    'Abdominal Supra Infra'
+  ];
+  List<bool> _isChecked = [];
+  @override
   void initState() {
     super.initState();
     _isChecked = List<bool>.filled(treinos.length, false);
   }
 
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         appBar: AppBar(
           title: const Text('treino A'),
@@ -45,23 +46,28 @@ class _TreinoAState extends State<TreinoA> {
                         child: CheckboxListTile(
                           title: Text(
                             treinos[index],
-                            style: _isChecked[index] 
+                            style: _isChecked[index]
                                 ? const TextStyle(
                                     color: Color.fromARGB(255, 212, 212, 212))
                                 : const TextStyle(),
                           ),
                           value: _isChecked[index],
-                          
+
                           onChanged: (val) {
-            setState(
-              () {
-                _isChecked[index] = val!;
-              },);},
-                          controlAffinity: ListTileControlAffinity.leading, //  <-- leading Checkbox
+                            setState(
+                              () {
+                                _isChecked[index] = val!;
+                              },
+                            );
+                          },
+                          controlAffinity: ListTileControlAffinity
+                              .leading, //  <-- leading Checkbox
                         ),
                       ),
-                      Text('sdasdas'),
-                      SizedBox(width: 20,),
+                      const Text('3x15'),
+                      const SizedBox(
+                        width: 20,
+                      ),
                     ],
                   );
                 }),
