@@ -1,18 +1,29 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class TreinoA extends StatefulWidget {
   const TreinoA({Key? key}) : super(key: key);
-
   @override
   State<TreinoA> createState() => _TreinoAState();
 }
 
+
+
 class _TreinoAState extends State<TreinoA> {
+  List<String> treinos = [
+  'Esteira',
+  'Bicicleta'
+];
+   List<bool> _isChecked = [];
+   @override
+  void initState() {
+    super.initState();
+    _isChecked = List<bool>.filled(treinos.length, false);
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    bool checkedValue = false;
 
     return Scaffold(
         appBar: AppBar(
@@ -26,25 +37,32 @@ class _TreinoAState extends State<TreinoA> {
           child: Padding(
             padding: const EdgeInsets.all(15),
             child: ListView.builder(
-                itemCount: 7,
+                itemCount: treinos.length,
                 itemBuilder: (context, index) {
-                  return CheckboxListTile(
-                    title: Text(
-                      "title text",
-                      style: checkedValue
-                          ? const TextStyle(
-                              color: Color.fromARGB(255, 212, 212, 212))
-                          : const TextStyle(),
-                    ),
-                    value: checkedValue,
-                    onChanged: (newValue) {
-                      setState(() {
-                        checkedValue = !checkedValue;
-                        log(checkedValue.toString());
-                      });
-                    },
-                    controlAffinity: ListTileControlAffinity
-                        .leading, //  <-- leading Checkbox
+                  return Row(
+                    children: [
+                      Expanded(
+                        child: CheckboxListTile(
+                          title: Text(
+                            treinos[index],
+                            style: _isChecked[index] 
+                                ? const TextStyle(
+                                    color: Color.fromARGB(255, 212, 212, 212))
+                                : const TextStyle(),
+                          ),
+                          value: _isChecked[index],
+                          
+                          onChanged: (val) {
+            setState(
+              () {
+                _isChecked[index] = val!;
+              },);},
+                          controlAffinity: ListTileControlAffinity.leading, //  <-- leading Checkbox
+                        ),
+                      ),
+                      Text('sdasdas'),
+                      SizedBox(width: 20,),
+                    ],
                   );
                 }),
           ),

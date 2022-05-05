@@ -42,7 +42,7 @@ class Treino extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 child: Center(
                     child: Text(
-                  'Treino 2',
+                  'Treino B',
                   style: TextStyle(
                     fontSize: 22,
                   ),
@@ -59,7 +59,7 @@ class Treino extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 child: Center(
                     child: Text(
-                  'Treino 3 - aeróbico',
+                  'Treino C - aeróbico',
                   style: TextStyle(
                     fontSize: 22,
                   ),
