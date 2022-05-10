@@ -53,7 +53,7 @@ class Treino extends StatelessWidget {
               elevation: 2,
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: InkWell(
-                onTap: () {},
+                onTap: () {Navigator.pushNamed(context, '/treinoB');},
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15, vertical: 75),
                   child: Center(
@@ -76,7 +76,7 @@ class Treino extends StatelessWidget {
               child: Stack(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {Navigator.pushNamed(context, '/treinoC');},
                     child: const Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 15, vertical: 75),

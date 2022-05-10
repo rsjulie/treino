@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class TreinoA extends StatefulWidget {
-  const TreinoA({Key? key}) : super(key: key);
+class TreinoB extends StatefulWidget {
+  const TreinoB({Key? key}) : super(key: key);
   @override
-  State<TreinoA> createState() => _TreinoAState();
+  State<TreinoB> createState() => _TreinoBState();
 }
 
-class _TreinoAState extends State<TreinoA> {
+class _TreinoBState extends State<TreinoB> {
   List<String> treinos = [
     'Cardio',
-    'Cadeira Extensora 07',
-    'Supino Vertical 02',
-    'Cadeira Adutora 09',
-    'Triceps Máquina 11',
-    'Leg Horizontal 17',
-    'Triceps Corda Cross',
-    'Abdominal Maq 14',
-    'Cardio',
+    'Cadeira Flexora',
+    'Remada Máquina',
+    'Cadeira Abdutora',
+    'Puxada Frontal Aberta',
+    'Glúteo Máquina',
+    'Rosca Alternada Halter',
+    'Abdominal Supra Infra',
+    'Cardio'
   ];
     List<String> repeticoes = [
     '10min',
@@ -40,7 +40,7 @@ class _TreinoAState extends State<TreinoA> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Treino A'),
+          title: const Text('Treino B'),
         ),
         body: Container(
           decoration: const BoxDecoration(

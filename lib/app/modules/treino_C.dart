@@ -1,34 +1,31 @@
 import 'package:flutter/material.dart';
 
-class TreinoA extends StatefulWidget {
-  const TreinoA({Key? key}) : super(key: key);
+class TreinoC extends StatefulWidget {
+  const TreinoC({Key? key}) : super(key: key);
   @override
-  State<TreinoA> createState() => _TreinoAState();
+  State<TreinoC> createState() => _TreinoCState();
 }
 
-class _TreinoAState extends State<TreinoA> {
+class _TreinoCState extends State<TreinoC> {
   List<String> treinos = [
-    'Cardio',
-    'Cadeira Extensora 07',
-    'Supino Vertical 02',
-    'Cadeira Adutora 09',
-    'Triceps Máquina 11',
-    'Leg Horizontal 17',
-    'Triceps Corda Cross',
-    'Abdominal Maq 14',
-    'Cardio',
+    'Esteira inclinada a 10%',
+    'Abdominal Infra',
+    'Escada',
+    'Abdominal supra bola suiça',
+    'Bike vertical',
+    'Abdominal Prancha Isométrica',
+    'Elíptico',
   ];
-    List<String> repeticoes = [
+  List<String> repeticoes = [
     '10min',
     '3x15',
+    '10min',
     '3x15',
-    '3x15',
-    '3x15',
-    '3x15',
-    '3x15',
-    '3x15',
-    '15min',
+    '10min',
+    '3x40seg',
+    '10min',
   ];
+
   List<bool> _isChecked = [];
   @override
   void initState() {
@@ -40,7 +37,7 @@ class _TreinoAState extends State<TreinoA> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Treino A'),
+          title: const Text('Treino C'),
         ),
         body: Container(
           decoration: const BoxDecoration(
@@ -62,6 +59,7 @@ class _TreinoAState extends State<TreinoA> {
                       children: [
                         Expanded(
                           child: CheckboxListTile(
+                            contentPadding: const EdgeInsets.only(left: 10),
                             title: Text(
                               treinos[index],
                               style: _isChecked[index]
@@ -82,7 +80,10 @@ class _TreinoAState extends State<TreinoA> {
                                 .leading, //  <-- leading Checkbox
                           ),
                         ),
-                        Text(repeticoes[index]),
+                        Text(repeticoes[index], style: _isChecked[index]
+                                  ? const TextStyle(
+                                      color: Color.fromARGB(255, 212, 212, 212))
+                                  : const TextStyle(),),
                         const SizedBox(
                           width: 20,
                         ),
