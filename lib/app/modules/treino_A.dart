@@ -18,7 +18,7 @@ class _TreinoAState extends State<TreinoA> {
     'Abdominal Maq 14',
     'Cardio',
   ];
-    List<String> repeticoes = [
+  List<String> repeticoes = [
     '10min',
     '3x15',
     '3x15',
@@ -44,11 +44,11 @@ class _TreinoAState extends State<TreinoA> {
         ),
         body: Container(
           decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    'https://media.istockphoto.com/photos/hd-wallpaper-for-mobile-phones-picture-id1257005098?b=1&k=20&m=1257005098&s=170667a&w=0&h=je8sgDZ9o62xavDKDHVSaAE4M6wug7Yt5vOaPI0VHFo='),
-                fit: BoxFit.cover)),
+              image: DecorationImage(
+                  image: AssetImage('assets/images/treino_bg.jpg'),
+                  fit: BoxFit.cover)),
           child: Card(
+            color: const Color.fromARGB(255, 33, 33, 33),
             elevation: 3,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
@@ -62,12 +62,15 @@ class _TreinoAState extends State<TreinoA> {
                       children: [
                         Expanded(
                           child: CheckboxListTile(
+                            activeColor: Colors.blue,
                             title: Text(
                               treinos[index],
                               style: _isChecked[index]
                                   ? const TextStyle(
-                                      color: Color.fromARGB(255, 212, 212, 212))
-                                  : const TextStyle(),
+                                      color: Color.fromARGB(255, 97, 97, 97))
+                                  : const TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
                             ),
                             value: _isChecked[index],
 
