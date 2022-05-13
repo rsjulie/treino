@@ -18,7 +18,7 @@ class _TreinoBState extends State<TreinoB> {
     'Abdominal Supra Infra',
     'Cardio'
   ];
-    List<String> repeticoes = [
+  List<String> repeticoes = [
     '10min',
     '3x15',
     '3x15',
@@ -41,13 +41,14 @@ class _TreinoBState extends State<TreinoB> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Treino B'),
+          centerTitle: true,
         ),
         body: Container(
           decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    'https://media.istockphoto.com/photos/hd-wallpaper-for-mobile-phones-picture-id1257005098?b=1&k=20&m=1257005098&s=170667a&w=0&h=je8sgDZ9o62xavDKDHVSaAE4M6wug7Yt5vOaPI0VHFo='),
-                fit: BoxFit.cover)),
+              image: DecorationImage(
+                  image: NetworkImage(
+                      'https://media.istockphoto.com/photos/hd-wallpaper-for-mobile-phones-picture-id1257005098?b=1&k=20&m=1257005098&s=170667a&w=0&h=je8sgDZ9o62xavDKDHVSaAE4M6wug7Yt5vOaPI0VHFo='),
+                  fit: BoxFit.cover)),
           child: Card(
             elevation: 3,
             shape:

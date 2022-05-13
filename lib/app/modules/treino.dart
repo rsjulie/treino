@@ -15,7 +15,7 @@ class Treino extends StatelessWidget {
                 fit: BoxFit.cover)),
         child: ListView(
           children: [
-            const SizedBox(height: 15),
+            const SizedBox(height: 50),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
               child: ClipRRect(
@@ -25,7 +25,7 @@ class Treino extends StatelessWidget {
                   child: Container(
                     height: 180,
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(39, 255, 255, 255),
+                        color: const Color.fromARGB(16, 255, 255, 255),
                         border: Border.all(
                           color: const Color.fromARGB(175, 255, 0, 0),
                           width: 2,
@@ -58,7 +58,7 @@ class Treino extends StatelessWidget {
                   child: Container(
                     height: 180,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(39, 255, 255, 255),
+                      color: const Color.fromARGB(16, 255, 255, 255),
                       border: Border.all(
                         color: const Color.fromARGB(175, 255, 0, 0),
                         width: 2,
@@ -92,7 +92,7 @@ class Treino extends StatelessWidget {
                   child: Container(
                     height: 180,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(39, 255, 255, 255),
+                      color: const Color.fromARGB(16, 255, 255, 255),
                       border: Border.all(
                         color: const Color.fromARGB(175, 255, 0, 0),
                         width: 2,
